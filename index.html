@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Inge 🐥🐓🐔👩🏼‍🎓🎓📚🛫🌎✈️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Partículas para el burst -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- Intro overlay (gift) -->
+    <div id="introOverlay" aria-hidden="false">
+        <div class="intro-text">
+            <div class="emoji" aria-hidden="true">🐥✨💜</div>
+            <div class="press">Presiona Aquí</div>
+        </div>
+        <button id="giftBtn" class="gift-btn" aria-label="Abrir regalo">
+            <svg class="gift-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="7" width="18" height="4" rx="1.5" fill="currentColor" opacity="0.95"/>
+                <path d="M12 3c1.657 0 3 1.567 3 3.5 0 .966-.44 1.83-1.136 2.38C13.59 9.19 12.84 9.5 12 9.5s-1.59-.31-1.864-.62C9.44 8.33 9 7.466 9 6.5 9 4.567 10.343 3 12 3z" fill="white" opacity="0.95"/>
+                <path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="card-container">
+        <div class="panel" id="panel">
+            <div class="slides">
+                <!-- PÁGINA 1: Cuando la conocí -->
+                <div class="card-page active" data-index="0">
+                    <div class="page-content">
+                        <h1 class="page-title">
+                            Nuestra Historia Comienza 💜🐥
+                        </h1>
+                        <p class="page-subtitle">Desde el primer momento supe que eras especial... 🐓✨</p>
+                        
+                        <div class="card-body">
+                            <div class="image-container" role="img" aria-label="Ella cuando la conocí">
+                                <img src="assets/chibi.png" alt="Ella" class="page-image">
+                            </div>
+                            <div class="card-text">
+                                <div class="typewriter-container">
+                                    <p class="typewriter-text" data-text="Recuerdo el día que te conocí, esa sonrisa que iluminó todo a mi alrededor. No sabía entonces que estabas destinada a ser la persona más importante de mi vida. Cada conversación, cada risa compartida, cada momento juntos fue construyendo algo hermoso entre nosotros. 🐔💜"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">
+                        Página 1/5 💜
+                    </div>
+                </div>
+
+                <!-- PÁGINA 2: Su dedicación y esfuerzo -->
+                <div class="card-page" data-index="1">
+                    <div class="page-content">
+                        <h2 class="page-title">Tu Dedicación y Esfuerzo 🎓🐓💪</h2>
+                        
+                        <div class="card-body">
+                            <div class="image-container" role="img" aria-label="Ella estudiando">
+                                <img src="assets/chibi.png" alt="Ella estudiando" class="page-image">
+                            </div>
+                            <div class="card-text">
+                                <div class="typewriter-container">
+                                    <p class="typewriter-text" data-text="He sido testigo de cada sacrificio, de cada noche sin dormir, de cada examen que preparaste con tanto empeño. Vi cómo enfrentaste cada desafío con una determinación que me dejaba sin palabras. Tu pasión por aprender, tu sed de conocimiento, tu brillantez académica... todo eso me hizo enamorarme aún más de ti. 🐥✨"></p>
+                                    <p class="typewriter-text" data-text="No solo eres inteligente, eres trabajadora, resiliente y nunca te rindes. Esas cualidades son las que te llevaron hasta aquí, y son las mismas que te llevarán a conquistar el mundo. 🐔💜"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">
+                        Página 2/5 💜
+                    </div>
+                </div>
+
+                <!-- PÁGINA 3: El futuro que viene -->
+                <div class="card-page" data-index="2">
+                    <div class="page-content">
+                        <h2 class="page-title">Un Futuro Brillante Te Espera 🚀🐥🌟</h2>
+                        
+                        <div class="card-body">
+                            <div class="image-container" role="img" aria-label="Ella mirando al futuro">
+                                <img src="assets/chibi.png" alt="Ella" class="page-image">
+                            </div>
+                            <div class="card-text">
+                                <div class="typewriter-container">
+                                    <p class="typewriter-text" data-text="Hoy cierras un capítulo increíble de tu vida, pero es solo el comienzo de algo aún más grande. Esta graduación no es el final, es la puerta de entrada a todos tus sueños. Sé que dondequiera que vayas, brillarás con una luz propia que iluminará todo a tu alrededor. 🐓✨"></p>
+                                    <p class="typewriter-text" data-text="Estoy orgulloso de la mujer en la que te has convertido: fuerte, inteligente, independiente y llena de sueños. Y estoy emocionado por ver todos los logros que están por venir. 🐥💜"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">
+                        Página 3/5 💜
+                    </div>
+                </div>
+
+                <!-- PÁGINA 4: Su viaje/partida -->
+                <div class="card-page" data-index="3">
+                    <div class="page-content">
+                        <h2 class="page-title">Tu Gran Aventura Comienza 🛫🌎🐓</h2>
+                        
+                        <div class="card-body">
+                            <div class="image-container" role="img" aria-label="Ella viajando">
+                                <img src="assets/chibi.png" alt="Ella viajando" class="page-image">
+                            </div>
+                            <div class="card-text">
+                                <div class="typewriter-container">
+                                    <p class="typewriter-text" data-text="Sé que pronto emprenderás un viaje, que el mundo te espera con los brazos abiertos para que lo conquistes. Aunque la distancia física nos separe, quiero que sepas que mi corazón siempre estará contigo, sin importar cuántos kilómetros nos separen. 🐔✈️💜"></p>
+                                    <p class="typewriter-text" data-text="Cada amanecer en tu nuevo hogar, cada experiencia nueva, cada persona que conozcas... todo eso será parte de tu crecimiento. Y aunque estaré lejos físicamente, estaré cerca en cada pensamiento, en cada mensaje, en cada momento que compartamos aunque sea a través de una pantalla. 🐓🌎"></p>
+                                    <p class="typewriter-text" data-text="Vuela alto, mi pequeña gallina valiente. El mundo es tuyo para conquistarlo, y yo estaré aquí, esperándote, apoyándote y amándote desde la distancia. 🐥✨🛫💜"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">
+                        Página 4/5 💜
+                    </div>
+                </div>
+
+                <!-- PÁGINA 5: Graduación y mensaje final -->
+                <div class="card-page" data-index="4">
+                    <div class="page-content">
+                        <h2 class="page-title">¡Felicidades, Mi Graduada! 🎓🐥💜</h2>
+
+                        <div class="card-body">
+                            <div class="image-container" role="img" aria-label="Ella graduada">
+                                <img src="assets/chibiGraduated.png" alt="Ella graduada" class="page-image">
+                            </div>
+                            <div class="card-text">
+                                <div class="typewriter-container">
+                                    <p class="typewriter-text" data-text="Hoy es un día especial, un día que marca el final de una etapa llena de esfuerzo, dedicación y crecimiento. Pero también es el inicio de algo hermoso: tu vida profesional, tus sueños hechos realidad, y nuestro futuro juntos. 🐓🎓✨"></p>
+                                    <p class="typewriter-text" data-text="Nunca dudes de tu valía. Eres la persona más inteligente, hermosa, determinada y especial que conozco. Esta graduación es solo la confirmación de lo que siempre supe: que eres increíble y que puedes lograr cualquier cosa que te propongas. 🐥💜"></p>
+                                    <p class="typewriter-text final-message" data-text="¡Felicidades, mi amor! Estoy inmensamente orgulloso de ti. Nuestro futuro juntos empieza ahora, y no puedo esperar a ver todos los logros que están por venir. Te amo más de lo que las palabras pueden expresar. 🐔💜🎓✨"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer signature">
+                        <p class="signature-text">Con todo mi amor, tu <span class="highlight">Novio</span>. 💜🐓</p>
+                        <p class="signature-date">Diciembre, 2025. 🐥✨</p>
+                    </div>
+                    <div class="page-footer">
+                        Página 5/5 💜
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+
+    <!-- Navegación -->
+    <button id="prevBtn" class="nav-btn left" aria-label="Página anterior">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+    </button>
+    <button id="nextBtn" class="nav-btn right" aria-label="Página siguiente">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+    </button>
+
+    <!-- Paginación (puntos) -->
+    <div class="pager" id="pager" aria-hidden="false"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
