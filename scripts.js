@@ -1,4 +1,3 @@
-// Carta de Graduación - Scripts mejorados
 document.addEventListener('DOMContentLoaded', () => {
     let currentPageIndex = 0;
     const pages = Array.from(document.querySelectorAll('.card-page'));
@@ -9,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const introOverlay = document.getElementById('introOverlay');
     const giftBtn = document.getElementById('giftBtn');
     const canvas = document.getElementById('particlesCanvas');
+    const bgAudio = document.getElementById('bgAudio');
     const ctx = canvas ? canvas.getContext('2d') : null;
 
     // Configurar canvas
@@ -21,6 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
             canvas.height = window.innerHeight;
         });
     }
+
+    // Intentar reproducir audio al cargar (puede requerir interacción en algunos navegadores)
+    function tryPlayAudio() {
+        if (!bgAudio) return;
+        bgAudio.volume = 0.6;
+        const playPromise = bgAudio.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+            playPromise.catch(() => {
+                // Algunos navegadores bloquean el autoplay hasta una interacción
+                // En ese caso, lo intentaremos de nuevo cuando el usuario haga clic en el regalo
+            });
+        }
+    }
+
+    tryPlayAudio();
 
     // Sistema de partículas
     let particles = [];
@@ -118,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         function typeNextChar() {
             if (currentTextIndex >= allTexts.length) {
-                return; // Terminamos
+                return; 
             }
             
             if (currentCharIndex < currentText.length) {
@@ -242,6 +257,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function startShow() {
         if (!introOverlay) return;
         
+        // Asegurar que el audio empiece/continúe tras la interacción del usuario
+        tryPlayAudio();
+
         // Agregar clase para animación más grande y lenta
         if (giftBtn) {
             giftBtn.classList.add('clicking');

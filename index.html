@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Mi Inge 🐥🐓🐔👩🏼‍🎓🎓📚🛫🌎✈️</title>
+    <title>Para Mi Inge 🐥</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐓</text></svg>">
     <link rel="stylesheet" href="styles.css">
+    <!-- Audio de fondo -->
+    <audio id="bgAudio" src="assets/audio.mp3" loop></audio>
 </head>
 <body>
     <!-- Partículas para el burst -->
     <canvas id="particlesCanvas"></canvas>
 
-    <!-- Intro overlay (gift) -->
+    <!-- Intro overlay -->
     <div id="introOverlay" aria-hidden="false">
         <div class="intro-text">
-            <div class="emoji" aria-hidden="true">🐥✨💜</div>
-            <div class="press">Presiona Aquí</div>
+            <div class="emoji" aria-hidden="true">🐓</div>
+            <div class="press">Presiona Aquí ☺️</div>
         </div>
+
         <button id="giftBtn" class="gift-btn" aria-label="Abrir regalo">
-            <svg class="gift-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="7" width="18" height="4" rx="1.5" fill="currentColor" opacity="0.95"/>
-                <path d="M12 3c1.657 0 3 1.567 3 3.5 0 .966-.44 1.83-1.136 2.38C13.59 9.19 12.84 9.5 12 9.5s-1.59-.31-1.864-.62C9.44 8.33 9 7.466 9 6.5 9 4.567 10.343 3 12 3z" fill="white" opacity="0.95"/>
-                <path d="M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <div style="font-size: 7rem; margin-bottom: 15px;">🎁</div>
         </button>
     </div>
 
@@ -32,17 +32,18 @@
                 <div class="card-page active" data-index="0">
                     <div class="page-content">
                         <h1 class="page-title">
-                            Nuestra Historia Comienza 💜🐥
+                            Un último regalo 💜
                         </h1>
-                        <p class="page-subtitle">Desde el primer momento supe que eras especial... 🐓✨</p>
+                        <p class="page-subtitle">Desde el primer momento ... ✨</p>
                         
                         <div class="card-body">
                             <div class="image-container" role="img" aria-label="Ella cuando la conocí">
-                                <img src="assets/chibi.png" alt="Ella" class="page-image">
+                                <img src="assets/kiss.jpg" alt="Ella" class="page-image" style="opacity: 0.7">
                             </div>
                             <div class="card-text">
                                 <div class="typewriter-container">
-                                    <p class="typewriter-text" data-text="Recuerdo el día que te conocí, esa sonrisa que iluminó todo a mi alrededor. No sabía entonces que estabas destinada a ser la persona más importante de mi vida. Cada conversación, cada risa compartida, cada momento juntos fue construyendo algo hermoso entre nosotros. 🐔💜"></p>
+                                    <p class="typewriter-text" data-text="Es curioso cómo un simple regalo de cumpleaños en ese mirador se convirtió en un montón de historias y anécdotas dignas de una aventura de película. Esa sonrisa llegó iluminando todo mi mundo, esos gruñidos que empecé a extrañar y ese 'idioma alienígena' que jamás entenderé. No sabía en ese entonces que te convertirías en la persona más importante de mi vida, pero cada conversación, cada risa compartida y cada momento fueron llenando poco a poco mi corazón hasta que ya no pudo más 💜"></p>
+                                    <p class="typewriter-text" data-text="No sé cuándo pasó ni qué fue lo que lo causó, pero mientras iban pasando los meses, de repente ya estaba enamorado de esa niña odiosa que le gustaba refutarme todo 😖. De esa niña a la que le encantaba que le cocinara y que solita me ponía la frente para darle un beso de buen provecho. De esa niña que disfrutaba que la durmiera y le leyera sus cuentos cochinos... y de esa niña que hacía caras cuando, de la nada y sin razón, le decía 'te amo' 💜"></p>
                                 </div>
                             </div>
                         </div>
@@ -52,19 +53,19 @@
                     </div>
                 </div>
 
-                <!-- PÁGINA 2: Su dedicación y esfuerzo -->
+                <!-- PÁGINA 2: El futuro que viene -->
                 <div class="card-page" data-index="1">
                     <div class="page-content">
-                        <h2 class="page-title">Tu Dedicación y Esfuerzo 🎓🐓💪</h2>
+                        <h2 class="page-title">Un futuro brillante 🚀🐥🌟</h2>
                         
                         <div class="card-body">
-                            <div class="image-container" role="img" aria-label="Ella estudiando">
-                                <img src="assets/chibi.png" alt="Ella estudiando" class="page-image">
+                            <div class="image-container" role="img" aria-label="Ella mirando al futuro">
+                                <img src="assets/horizon.webp" alt="Ella" class="page-image">
                             </div>
                             <div class="card-text">
                                 <div class="typewriter-container">
-                                    <p class="typewriter-text" data-text="He sido testigo de cada sacrificio, de cada noche sin dormir, de cada examen que preparaste con tanto empeño. Vi cómo enfrentaste cada desafío con una determinación que me dejaba sin palabras. Tu pasión por aprender, tu sed de conocimiento, tu brillantez académica... todo eso me hizo enamorarme aún más de ti. 🐥✨"></p>
-                                    <p class="typewriter-text" data-text="No solo eres inteligente, eres trabajadora, resiliente y nunca te rindes. Esas cualidades son las que te llevaron hasta aquí, y son las mismas que te llevarán a conquistar el mundo. 🐔💜"></p>
+                                    <p class="typewriter-text" data-text="Y pensar que hoy por fin llegó el día en que esa niña cierra este capítulo increíble de su vida, después de un esfuerzo que nadie se imagina. Es el momento en el que todas esas lágrimas de ansiedad y tristeza se convierten en lágrimas de felicidad, por ver cómo al final todo dio frutos y ves a mami y papi mirarte con aún más orgullo y decir: 'esa es mi hija, la ingeniera'. Y un Jesús que, desde lo lejos, te está esperando para decirte un 'felicidades, corazón', que aunque quizá falte en este día, estará contigo en todos los que vienen 💜."></p>
+                                    <p class="typewriter-text" data-text="Sé que siempre seguirás brillando e iluminando a todos a tu alrededor ✨. Una mujer que triunfará donde sea que vaya, con esa sonrisa que alegra corazones y esa forma de ser que le cae bien a cualquiera 🐥💜"></p>
                                 </div>
                             </div>
                         </div>
@@ -74,42 +75,42 @@
                     </div>
                 </div>
 
-                <!-- PÁGINA 3: El futuro que viene -->
+                <!-- PÁGINA 2: Dedicación y esfuerzo -->
                 <div class="card-page" data-index="2">
                     <div class="page-content">
-                        <h2 class="page-title">Un Futuro Brillante Te Espera 🚀🐥🌟</h2>
+                        <h2 class="page-title">Tu Dedicación y Esfuerzo 🎓📚💪</h2>
                         
                         <div class="card-body">
-                            <div class="image-container" role="img" aria-label="Ella mirando al futuro">
-                                <img src="assets/chibi.png" alt="Ella" class="page-image">
+                            <div class="image-container" role="img" aria-label="Ella estudiando">
+                                <img src="assets/study.jpg" alt="Ella estudiando" class="page-image">
                             </div>
                             <div class="card-text">
                                 <div class="typewriter-container">
-                                    <p class="typewriter-text" data-text="Hoy cierras un capítulo increíble de tu vida, pero es solo el comienzo de algo aún más grande. Esta graduación no es el final, es la puerta de entrada a todos tus sueños. Sé que dondequiera que vayas, brillarás con una luz propia que iluminará todo a tu alrededor. 🐓✨"></p>
-                                    <p class="typewriter-text" data-text="Estoy orgulloso de la mujer en la que te has convertido: fuerte, inteligente, independiente y llena de sueños. Y estoy emocionado por ver todos los logros que están por venir. 🐥💜"></p>
+                                    <p class="typewriter-text" data-text="Aunque no te conozco desde hace tanto, he sido testigo del esfuerzo que has puesto para superarte a ti misma. Vi cómo enfrentaste cada desafío aunque estabas aterrada, pero aun así seguiste adelante. Tu pasión por las cosas, tu curiosidad y esas ganas de aprender lo que todavía no conoces, esa sonrisa gigante que se te forma cuando hablas de lo que te ilusiona... hacen que te admire cada día más."></p>
+                                    <p class="typewriter-text" data-text="Todos estamos muy orgullosos de la mujer en la que te has convertido: alguien fuerte, inteligente, independiente, trabajadora, dedicada y, sobre todo, neciaaa 😖 jaja. Nunca te rindes, y son justo esas cualidades las que te trajeron hasta aquí y las mismas que te llevarán a conquistar el mundo que tienes delante 🐔💜"></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="page-footer">
-                        Página 3/5 💜
+                        Página 2/5 💜
                     </div>
                 </div>
 
                 <!-- PÁGINA 4: Su viaje/partida -->
                 <div class="card-page" data-index="3">
                     <div class="page-content">
-                        <h2 class="page-title">Tu Gran Aventura Comienza 🛫🌎🐓</h2>
+                        <h2 class="page-title">Gran viaje 🛫🌎</h2>
                         
                         <div class="card-body">
                             <div class="image-container" role="img" aria-label="Ella viajando">
-                                <img src="assets/chibi.png" alt="Ella viajando" class="page-image">
+                                <img src="assets/viaje.avif" alt="Ella viajando" class="page-image">
                             </div>
                             <div class="card-text">
                                 <div class="typewriter-container">
-                                    <p class="typewriter-text" data-text="Sé que pronto emprenderás un viaje, que el mundo te espera con los brazos abiertos para que lo conquistes. Aunque la distancia física nos separe, quiero que sepas que mi corazón siempre estará contigo, sin importar cuántos kilómetros nos separen. 🐔✈️💜"></p>
-                                    <p class="typewriter-text" data-text="Cada amanecer en tu nuevo hogar, cada experiencia nueva, cada persona que conozcas... todo eso será parte de tu crecimiento. Y aunque estaré lejos físicamente, estaré cerca en cada pensamiento, en cada mensaje, en cada momento que compartamos aunque sea a través de una pantalla. 🐓🌎"></p>
-                                    <p class="typewriter-text" data-text="Vuela alto, mi pequeña gallina valiente. El mundo es tuyo para conquistarlo, y yo estaré aquí, esperándote, apoyándote y amándote desde la distancia. 🐥✨🛫💜"></p>
+                                    <p class="typewriter-text" data-text="Sé que pronto te irás y, aunque me duela en el corazón, le agradezco mil veces a la vida por haberme dejado conocerte y vivir todo este tiempo contigo. Quiero que sepas que, aunque la distancia al final nos separe, siempre te llevaré en el corazón, como aquella niña peleona que terminó convirtiéndose en mi niña consentida 💜"></p>
+                                    <p class="typewriter-text" data-text="Y espero que cada amanecer en ese nuevo hogar, cada experiencia nueva y cada persona que conozcas sea maravillosa; que sigan haciéndote sonreír y sentirte feliz de estar viviendo una vida de la que no te vas a arrepentir, para que sigas creciendo mucho más, convirtiéndote en esa mujer que la pequeña Vero siempre soñó ser y que, cuando tengas tu 'cita con ella', puedas contarle todo lo que has logrado 🐣💜"></p>
+                                    <p class="typewriter-text" data-text="El mundo es muy amplio y quién sabe qué nos depare la vida; uno nunca sabe si al final tendremos unos ovejitos 🐑🐑. Pero antes de eso, siempre te desearé un feliz viaje y rezaré para que Diosito siempre me la cuide y logres todo lo que tu corazón desea 🛫"></p>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +123,7 @@
                 <!-- PÁGINA 5: Graduación y mensaje final -->
                 <div class="card-page" data-index="4">
                     <div class="page-content">
-                        <h2 class="page-title">¡Felicidades, Mi Graduada! 🎓🐥💜</h2>
+                        <h2 class="page-title">¡Felicidades Inge! 👩🏼‍🎓🎓💜</h2>
 
                         <div class="card-body">
                             <div class="image-container" role="img" aria-label="Ella graduada">
@@ -130,16 +131,16 @@
                             </div>
                             <div class="card-text">
                                 <div class="typewriter-container">
-                                    <p class="typewriter-text" data-text="Hoy es un día especial, un día que marca el final de una etapa llena de esfuerzo, dedicación y crecimiento. Pero también es el inicio de algo hermoso: tu vida profesional, tus sueños hechos realidad, y nuestro futuro juntos. 🐓🎓✨"></p>
-                                    <p class="typewriter-text" data-text="Nunca dudes de tu valía. Eres la persona más inteligente, hermosa, determinada y especial que conozco. Esta graduación es solo la confirmación de lo que siempre supe: que eres increíble y que puedes lograr cualquier cosa que te propongas. 🐥💜"></p>
-                                    <p class="typewriter-text final-message" data-text="¡Felicidades, mi amor! Estoy inmensamente orgulloso de ti. Nuestro futuro juntos empieza ahora, y no puedo esperar a ver todos los logros que están por venir. Te amo más de lo que las palabras pueden expresar. 🐔💜🎓✨"></p>
+                                    <p class="typewriter-text" data-text="Nunca dudes de ti 💪. Eres la persona más hermosa, increíble, única y especial que conozco 💜. Esta graduación es solo una pequeña confirmación de lo increíble que eres y de que puedes lograr cualquier cosa que te propongas 🐥💜"></p>
+                                    <p class="typewriter-text" data-text="¡Felicidades, a-mor-si-to! jaja 🎓✨ Y aunque suene a disco rayado y no quiera que sea la última vez... déjame decirlo solo una vez más..."></p>
+                                    <p class="typewriter-text final-message" data-text="Estoy inmensamente orgulloso de ti. Te amo un millón. 🐔💜"></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="page-footer signature">
-                        <p class="signature-text">Con todo mi amor, tu <span class="highlight">Novio</span>. 💜🐓</p>
-                        <p class="signature-date">Diciembre, 2025. 🐥✨</p>
+                        <p class="signature-text">Con todo mi cariño 💜. Felicitaciones, ingeniera Ana Verónica Jaimes Méndez 🎓</p>
+                        <p class="signature-date">Diciembre, 2025. 🐥🐓✨</p>
                     </div>
                     <div class="page-footer">
                         Página 5/5 💜

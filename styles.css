@@ -15,17 +15,13 @@
 
 html, body {
     height: 100%;
+    /* Permitimos que el contenido interno maneje su propio scroll (card-page en móvil) */
     overflow: hidden;
 }
 
 body {
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg-black);
-    background-image: url('assets/walppaper.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: radial-gradient(circle at top, #1b1030 0, #050509 45%, #020204 100%);
     color: var(--text-light);
     display: flex;
     align-items: center;
@@ -38,7 +34,10 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background: rgba(10, 10, 10, 0.75);
+    background-image:
+        radial-gradient(circle at top left, rgba(155, 89, 182, 0.6), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(187, 143, 206, 0.35), transparent 55%),
+        rgba(5, 5, 10, 0.9);
     z-index: 0;
     pointer-events: none;
 }
@@ -109,12 +108,14 @@ body::before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: transparent;
+    background: radial-gradient(circle at top, rgba(25, 15, 45, 0.98) 0, rgba(10, 7, 20, 0.98) 45%, rgba(6, 4, 12, 0.98) 100%);
     transition: transform 700ms cubic-bezier(0.2, 0.9, 0.2, 1), 
                 opacity 600ms ease;
     transform: translateX(120%);
     opacity: 0;
     z-index: 1;
+    /* En escritorio, sin scroll visible; en móvil se sobreescribe */
+    overflow: hidden;
 }
 
 .card-page.active {
@@ -203,6 +204,11 @@ body::before {
     filter: brightness(1.05) contrast(1.1);
 }
 
+/* Oscurecer un poco la primera imagen (kiss.jpg, página 0) para que no deslumbre */
+.card-page[data-index="0"] .page-image {
+    filter: brightness(0.7) contrast(1.1);
+}
+
 .card-text {
     flex: 1;
     color: var(--text-light);
@@ -251,9 +257,7 @@ body::before {
 }
 
 .highlight {
-    color: var(--purple-vibrant);
-    font-weight: 700;
-    text-shadow: 0 2px 8px rgba(155, 89, 182, 0.4);
+    /* Eliminada por no usarse */
 }
 
 .signature-date {
@@ -346,7 +350,7 @@ body::before {
     align-items: center;
     gap: 16px;
     color: var(--text-light);
-    margin-bottom: 24px;
+    margin-bottom: 35px;
 }
 
 .intro-text .emoji {
@@ -360,7 +364,7 @@ body::before {
     letter-spacing: 1px;
     font-size: 1.25rem;
     color: var(--purple-light);
-    animation: pulse 2s ease-in-out infinite;
+    /* animation: pulse 2s ease-in-out infinite; */
 }
 
 @keyframes pulse {
@@ -420,49 +424,76 @@ body::before {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .image-container {
-        width: 300px;
-        height: 240px;
+    .panel {
+        width: 96vw;
+        height: 92vh;
     }
-    
-    .page-title {
-        font-size: 2rem;
-    }
-    
+
     .card-body {
         flex-direction: column;
         gap: 24px;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 220px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        line-height: 1.8;
     }
 }
 
 @media (max-width: 640px) {
     .panel {
-        width: 96vw;
-        height: 92vh;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
     }
-    
+
     .card-page {
-        padding: 24px;
+        padding: 20px 18px 36px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
-    
+
+    .page-content {
+        gap: 18px;
+    }
+
     .image-container {
         width: 100%;
         height: 200px;
     }
-    
-    .nav-btn.left {
-        left: 12px;
-    }
-    
-    .nav-btn.right {
-        right: 12px;
-    }
-    
-    .pager {
-        bottom: 14px;
-    }
-    
+
     .page-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .nav-btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .nav-btn.left {
+        left: 10px;
+    }
+
+    .nav-btn.right {
+        right: 10px;
+    }
+
+    .pager {
+        bottom: 10px;
     }
 }
