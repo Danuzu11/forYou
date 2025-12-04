@@ -20,26 +20,47 @@ html, body {
 }
 
 body {
+    /* Propiedades básicas de fuente y color de texto */
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    background: radial-gradient(circle at top, #1b1030 0, #050509 45%, #020204 100%);
     color: var(--text-light);
+
+    /* Propiedades de centrado y posición */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    /* Evita que el body tenga su propio fondo para que ::before pueda manejarlo */
+    background: none; 
 }
 
-/* Overlay oscuro sobre la imagen de fondo para mejor legibilidad */
+/* Overlay oscuro con el gradiente de círculo morado */
 body::before {
     content: '';
     position: fixed;
-    inset: 0;
-    background-image:
-        radial-gradient(circle at top left, rgba(155, 89, 182, 0.6), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(187, 143, 206, 0.35), transparent 55%),
-        rgba(5, 5, 10, 0.9);
-    z-index: 0;
-    pointer-events: none;
+    inset: 0; 
+    
+    /* 1. Capa Superior (Círculo Morado) */
+    /* Crea un gradiente circular morado claro semi-transparente */
+    background-image: 
+        radial-gradient(circle at top , 
+                        rgba(155, 89, 182, 0.4) 0%, /* Morado claro, 40% opacidad */
+                        transparent 45%), 
+        
+    /* 2. Capa Intermedia (Oscurecimiento Global) */
+    /* Capa negra semi-transparente para oscurecer todo (incluyendo la imagen) */
+        linear-gradient(rgba(5, 5, 10, 0.7), rgba(5, 5, 10, 0.7)),
+        
+    /* 3. Capa Inferior (La Imagen de Fondo) */
+        url('assets/walppaper.jpg'); 
+
+    /* Configuración de las imágenes de fondo */
+    background-size: cover, cover, cover; /* Cada capa debe tener su propio size si es necesario */
+    background-position: center, center, center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    
+    z-index: -1; /* Mueve el overlay detrás del contenido del body */
+    pointer-events: none; /* Asegura que el overlay no interfiera con clics */
 }
 
 /* Canvas para partículas */
